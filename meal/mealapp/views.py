@@ -48,3 +48,41 @@ class CatererView(APIView):
             serializerdata.save()
             return Response(serializerdata.data)
         return Response(serializerdata.errors)
+
+class CustomerDetailView(APIView):
+    def get(self, request, pk, format=None):
+        customer = CustomUser.objects.get(pk=pk)
+        serializerdata = CustomUserSerializer(customer)
+        return Response(serializerdata.data)
+
+    def put(self, request, pk, format=None):
+        customer = CustomUser.objects.get(pk=pk)
+        serializerdata = CustomUserSerializer(customer, data=request.data)
+        if serializerdata.is_valid():
+            serializerdata.save()
+            return Response(serializerdata.data)
+        return Response(serializerdata.errors)
+
+    def delete(self, request, pk, format=None):
+        customer = CustomUser.objects.get(pk=pk)
+        customer.delete()
+        return Response(status=None)
+
+class CatererDetailView(APIView):
+    def get(self, request, pk, format=None):
+        caterer = CustomUser.objects.get(pk=pk)
+        serializerdata = CustomUserSerializer(caterer)
+        return Response(serializerdata.data)
+
+    def put(self, request, pk, format=None):
+        caterer = CustomUser.objects.get(pk=pk)
+        serializerdata = CustomUserSerializer(caterer, data=request.data)
+        if serializerdata.is_valid():
+            serializerdata.save()
+            return Response(serializerdata.data)
+        return Response(serializerdata.errors)
+
+    def delete(self, request, pk, format=None):
+        caterer = CustomUser.objects.get(pk=pk)
+        caterer.delete()
+        return Response(status=None)
