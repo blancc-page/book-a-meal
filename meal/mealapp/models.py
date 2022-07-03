@@ -18,3 +18,5 @@ class Customer(models.Model):
 
 class Caterer(models.Model):
     user = models.OneToOneField(CustomUser, on_delete=models.CASCADE, primary_key=True)
+
+

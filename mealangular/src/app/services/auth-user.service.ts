@@ -15,8 +15,8 @@ export class AuthUserService {
 
   constructor(private http: HttpClient) { }
 
-  loginUser(username: string, password: string) {
-    return this.http.post(baseUrl + 'login', { username: username, password: password }, httpOptions);
+  loginUser(email: string, password: string) {
+    return this.http.post(baseUrl + 'login', { email: email, password: password }, httpOptions);
   }
 
   createUser(username: string, email: string, password: string, is_caterer: any, is_customer: any) {
