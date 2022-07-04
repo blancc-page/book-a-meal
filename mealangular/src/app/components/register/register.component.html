@@ -6,10 +6,9 @@
         <form #userCredentials = "ngForm" class="example-form" (ngSubmit)="createUser(userCredentials.value)" aria-required="true">
             <mat-card-content>
                 <mat-form-field class="example-full-width">
-                    <mat-label>Choose a role...</mat-label>
-                    <mat-select (selectionChange)="changeClient($event.value)" required>
-                        <mat-option [value]="roles" *ngFor="let roles of Roles">{{roles.name}}
-                        </mat-option>
+                    
+                    <mat-select >
+                        
                     </mat-select>
                 </mat-form-field>
                 <mat-form-field class="example-full-width">

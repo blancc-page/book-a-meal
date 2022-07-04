@@ -6,7 +6,6 @@ import { ProfileComponent } from './components/profile/profile.component';
 import { MenuComponent } from './components/menu/menu.component';
 
 const routes: Routes = [
-  { path: '', pathMatch: 'full', redirectTo: 'login' },
   { path: 'login', component: LogInComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'profile', component: ProfileComponent },

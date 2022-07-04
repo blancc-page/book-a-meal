@@ -12,9 +12,10 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 
 from pathlib import Path
 from decouple import config
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
 # Quick-start development settings - unsuitable for production
@@ -39,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'mealapp.apps.MealappConfig',
+    'public.apps.PublicConfig',
     'rest_framework',
     'rest_framework.authtoken',
     'corsheaders',
@@ -61,8 +63,14 @@ MIDDLEWARE = [
 
 CORS_ORIGIN_ALLOW_ALL = False
 CORS_ORIGIN_WHITELIST = (
-    'http://localhost:8081',
+    'http://localhost:4200',
+    "http://127.0.0.1:4200",
 )
+
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:4200",
+    "http://127.0.0.1:4200",
+]
 
 ROOT_URLCONF = 'meal.urls'
 
