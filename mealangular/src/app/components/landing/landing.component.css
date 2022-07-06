@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,700;1,800&family=Splash&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    transition: all 0.2s ease;
+}
+
+body{
+    font-family: "Open Sans", sans-serif;
+    color: #222;
+    padding-bottom: 50px;
+    font-family: 'Montserrat', sans-serif;
+}
+section{
+    margin: 50px 0;
+}
+.ripple{
+    background-color: #fff;
+    color: #000;
+    /* border: 1px purple solid; */
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    border: none;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 20px 30px;
+    overflow: hidden;
+    margin: 10px 0;
+    position: relative;
+}
+.ripple:focus{
+    outline: none;
+}
+.ripple .circle{
+    position: absolute;
+    background-color: #FB6357;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    animation: scale 0.5s ease-out;
+}
+
+@keyframes scale{
+    to{
+        transform: translate(-50%, -50%) scale(3);
+        opacity: 0;
+    }
+}
+.nav-container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.nav{
+    position: fixed;
+    background-color: #fff;
+    top: 0;
+    left: 0;
+    right: 0;
+    transition: all 0.3s ease-in-out;
+    z-index: 100;
+}
+.nav .nav-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    transition: 0.3s ease-in-out;
+}
+.nav ul{
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+    justify-content: center;
+}
+.nav a{
+    color: #000;
+    text-decoration: none;
+    padding: 7px 15px;
+    transition: 0.3s ease-in-out;
+}
+.nav.active{
+    background-color: #fff;
+    box-shadow:0 2px 10px rgba(0, 0, 0, 0.3);
+}
+.nav.active a{
+    color: #000;
+}
+.nav.active .nav-container{
+    padding: 10px 0;
+}
+.nav a.current, .nav a:hover{
+    color: #FB6357;
+    font-weight: bold;
+    transition: 0.1s ease-in;
+}
+.logo{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+}
+.row .col-md-4{
+    color: #fff;
+    padding: 18% 0% 10% 2%;
+}
+.alt-logo{
+    font-family: 'Splash', cursive;
+    font-size: 55px;
+}
+.alt-logo-text{
+    margin: 45px 0;
+}
+.hero-img{
+    background-image: url("https://images.unsplash.com/photo-1539136788836-5699e78bfc75?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80");
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    margin-bottom: 20px;
+}
+.hero-img.col-md-8::before{
+    content: " ";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 2;
+}
+/* .hero-img h1{
+    font-size: 46px;
+    margin: -20px 0 20px;
+}
+.hero-img p{
+    font-size: 20px;
+    letter-spacing: 1px;
+} */
+section{
+    padding: 1% 2% 1% 5%;
+}
+/* div.menu{
+    height: 130px;
+    padding: 0;
+} */
+.about-us-text{
+    width: 60%;
+}
+.about-us-text p{
+    margin-bottom: 40px;
+}
+.about-us-img{
+    content:" ";
+    background-image: url('https://images.unsplash.com/photo-1569718212165-3a8278d5f624?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom center;
+    height: 300px;
+    width: 300px;
+    margin-left: 150px;
+}
+.sub-img-container{
+    display: flex;
+    justify-content: space-between;
+}
+.sub-img{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom center;
+    display: flex;
+    width: 130px;
+    height: 130px;
+    background-color: #FB6357;
+
+}
+.a{
+    background-image: url('https://images.unsplash.com/photo-1525351326368-efbb5cb6814d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80');
+}
+.b{
+    background-image: url('https://images.unsplash.com/photo-1605851868183-7a4de52117fa?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80');
+}
+.c{
+    background-image: url('https://images.unsplash.com/photo-1514326640560-7d063ef2aed5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80');
+}
+.content h2, .content h3{
+    font-size: 150%;
+    margin: 20px 0;
+}
+.content p {
+    color: #555;
+    line-height: 30px;
+    letter-spacing: 1.2px;
+}
+
+.btn{
+    padding: 10px 15px;
+}
+.menu-desc{
+    padding: 2% 0 0 4%;
+}
+.menu-item{
+    margin-left: 50px;
+}
+.menu-heading{
+    text-align: center;
+}
+.menu1-img{
+    content: " ";
+    height: 130px;
+    width: 130px;
+    background-image: url('https://images.unsplash.com/photo-1514326640560-7d063ef2aed5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom center;
+}
+.menu{
+    height: 130px;
+    margin-top: 30px;
+}
+.price{
+    margin-top:-50%;
+    background-color: #FB6357;
+    border: none;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+.price:focus{
+    outline: none!important;
+}
+.footer-section{
+    width: 100%;
+    height: 150px;
+    background-color: #FB6357;
+}
+.footer-details{
+    height: 100px;
+    padding: 0!important;
+    display: flex!important;
+    justify-content: space-around;
+}
+.dev-img{
+    border-radius: 100%;
+    height: 50px;
+    width: 50px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom center;
+}
+.e{
+    background-image: url('https://avatars.githubusercontent.com/u/100132353?v=4');
+}
+.f{
+    background-image: url('https://avatars.githubusercontent.com/u/87655908?v=4');
+}
+.g{
+    background-image: url('https://avatars.githubusercontent.com/u/98014792?v=4');
+}
+.h{
+    background-image: url('https://avatars.githubusercontent.com/u/88707616?v=4');
+}
+.i{
+    background-image: url('https://avatars.githubusercontent.com/u/65918325?v=4');
+}
+
+.footer-logo{
+    font-family: 'Splash', cursive;
+}
+.footer-logo p{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    margin-top: 20px;
+}
