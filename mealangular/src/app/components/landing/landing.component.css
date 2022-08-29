@@ -247,7 +247,7 @@ a{
     text-decoration: none;
 }
 
-@media (max-width: 1230px) {
+/* @media (max-width: 1230px) {
     .about-us{
         transform: translateX(16%);
     }
@@ -260,5 +260,6 @@ a{
         width: 150px;
         height: 150px;
     }
-}
+} */
+
 

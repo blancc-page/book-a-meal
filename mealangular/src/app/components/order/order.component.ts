@@ -43,16 +43,14 @@ addOrders(){
     this.publicService.addOrder(item[0]).pipe(
       catchError(this.handleError)
     ).subscribe(
-      (data: any)=>{
+      data=>{
         console.log(data);
       }
     )
 
   })
-
   alert("Your order(s) have been placed!")
   window.location.href = "/"
-
 }
 
 }
